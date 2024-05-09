@@ -17,6 +17,23 @@ class PlantGrowState extends State<PlantGrow> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
+              "Here's how your plant",
+              style: TextStyle(
+                  color: Color(0xff59533D),
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "is doing.",
+              style: TextStyle(
+                  color: Color(0xff59533D),
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
               "You're doing great!",
               style: TextStyle(
                 color: Color(0xff59533D),
@@ -80,6 +97,36 @@ class PlantGrowState extends State<PlantGrow> {
           children: [
             Image(
               image: AssetImage("images/vine.png"),
+            ),
+            RichText(
+              textAlign: TextAlign.left, // Adjust text alignment as needed
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Reach ', // Normal text
+                    style: TextStyle(
+                      color: Color(0xff59533D),
+                      fontSize: 20,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Lvl 4', // Text with different color and bold
+                    style: TextStyle(
+                      color: Colors.red, // Different color for emphasis
+                      fontWeight: FontWeight.bold, // Make it bold
+                      fontSize: 20, // Ensure same font size for consistency
+                    ),
+                  ),
+                  TextSpan(
+                    text:
+                        ' to unlock \n Verdant Vine', // Normal text with new line
+                    style: TextStyle(
+                      color: Color(0xff59533D),
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
