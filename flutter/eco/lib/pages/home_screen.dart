@@ -1,3 +1,5 @@
+import 'package:eco/pages/plant.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -229,30 +231,37 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(color: Color(0xffA7B779))),
                       ],
                     ),
-                    Card(
-                      margin: EdgeInsets.only(left: 15, right: 15, top: 5),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          // Image fitted to the card with a fixed height
-                          Container(
-                            height: 200, // Fixed height for the card
-                            child: Image.asset(
-                              'images/pot.png', // Path to your image
-                              fit: BoxFit.cover, // Fills the available space
-                              width: double
-                                  .infinity, // Ensures the image stretches horizontally
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Plant(),
+                        ));
+                      },
+                      child: Card(
+                        margin: EdgeInsets.only(left: 15, right: 15, top: 5),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            // Image fitted to the card with a fixed height
+                            Container(
+                              height: 200, // Fixed height for the card
+                              child: Image.asset(
+                                'images/pot.png', // Path to your image
+                                fit: BoxFit.cover, // Fills the available space
+                                width: double
+                                    .infinity, // Ensures the image stretches horizontally
+                              ),
                             ),
-                          ),
-                          // ListTile(
-                          //   leading: Icon(Icons.image),
-                          //   title: Text('Card with Fitted Image'),
-                          //   subtitle: Text('This card contains an image that fills the space.'),
-                          // ),
-                        ],
+                            // ListTile(
+                            //   leading: Icon(Icons.image),
+                            //   title: Text('Card with Fitted Image'),
+                            //   subtitle: Text('This card contains an image that fills the space.'),
+                            // ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
