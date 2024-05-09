@@ -75,6 +75,14 @@ class PlantGrowState extends State<PlantGrow> {
       bottomSheet: Container(
         color: Color(0xffEAE4C0),
         height: 185,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(
+              image: AssetImage("images/vine.png"),
+            ),
+          ],
+        ),
       ),
     );
   }

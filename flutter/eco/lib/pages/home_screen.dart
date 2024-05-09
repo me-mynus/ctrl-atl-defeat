@@ -1,3 +1,4 @@
+import 'package:eco/pages/camera.dart';
 import 'package:eco/pages/plant.dart';
 import 'package:eco/pages/upscaling.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         break;
       case 1:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Upcycling()));
+            context, MaterialPageRoute(builder: (context) => Camera()));
 
         break;
       case 2:

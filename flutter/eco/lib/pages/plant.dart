@@ -38,9 +38,12 @@ class _PlantState extends State<Plant> {
               SizedBox(
                 height: 30, // Adjust the space at the top
               ),
-              Center(
-                child: Image(
-                  image: AssetImage('images/question.png'),
+              Padding(
+                padding: const EdgeInsets.only(left: 12.0),
+                child: Center(
+                  child: Image(
+                    image: AssetImage('images/question.png'),
+                  ),
                 ),
               ),
               SizedBox(
