@@ -1,3 +1,4 @@
+import 'package:eco/pages/home_screen.dart';
 import 'package:eco/pages/plant.dart';
 import 'package:eco/pages/plant_grow.dart';
 import 'package:flutter/material.dart';
@@ -83,7 +84,7 @@ class _PlantNoState extends State<PlantNo> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PlantGrow(),
+                      builder: (context) => HomeScreen(),
                     ),
                   );
                 },

@@ -1,6 +1,7 @@
 import 'package:eco/pages/camera.dart';
 import 'package:eco/pages/plant.dart';
 import 'package:eco/pages/upscaling.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -162,19 +163,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      width: 180,
-                      height: 180,
-                      child: Image.asset(
-                        'images/1.png', // Path to your image
-                        fit: BoxFit.contain, // Fills the available space
-                        width: double
-                            .infinity, // Ensures the image stretches horizontally
-                      ),
-                      decoration: BoxDecoration(
-                        color: Color(0xffA7B779),
-                        borderRadius: BorderRadius.circular(
-                            10), // Border radius for the text field
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => Upcycling(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 180,
+                        height: 180,
+                        child: Image.asset(
+                          'images/1.png', // Path to your image
+                          fit: BoxFit.contain, // Fills the available space
+                          width: double
+                              .infinity, // Ensures the image stretches horizontally
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xffA7B779),
+                          borderRadius: BorderRadius.circular(
+                              10), // Border radius for the text field
+                        ),
                       ),
                     ),
                     Container(
